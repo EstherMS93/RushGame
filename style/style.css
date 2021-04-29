@@ -41,7 +41,7 @@ video {
     height: 30rem;
     width : 70rem;
     border-radius: 10px;
-    box-shadow: 16px 8px darkred;
+    box-shadow: 5px 10px 20px 5px darkred;
     opacity: 0.9;
     position: relative;
 }
