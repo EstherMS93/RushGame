@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Formula Rush</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
+    <video src="img/car-background.mov" type="video/mov" autoplay loop playsinline muted></video>
+    <header>
+        <nav id="nav-bar">
+            <img src="img/logo_formula1_nuevo.jpg" alt="logo-f1" id="logo">
+            <a href="index.html" id="reload">Return to paddock</a>
+        </nav>
+    </header>
     <div id="container">
+        <h1 id="title">🏁 <span>RUSH!</span> 🏁 </h1>
         <div id="start">
-            <p>Start Quiz!</p>
+            <p>Ready? Set? Go!</p>
         </div>
         <div id="quiz" style="display: none">
             <div id="question"></div>
-            <div id="qImg"></div>
+            <div id="circuit"></div>
             <div id="choices">
                 <div class="choice" id="A" onclick="checkAnswer('A')"></div>
                 <div class="choice" id="B" onclick="checkAnswer('B')"></div>
@@ -28,8 +36,13 @@
             <audio class="sound" id="audiotag1" src="audio/mixkit-car-engine-start-1566.wav" preload="auto"></audio>
             <audio class="sound" id="audiotag2" src="audio/mixkit-small-car-horn-717.wav" preload="auto"></audio>
         </div>
-        <div id="scoreContainer" style="display: none"></div>
+        <div id="scoreContainer" style="display: none">
+            <img src="img/schumi.gif" alt="Michael Schumacher" id="schumi">
+        </div>
+        <footer>
+            <p></p>
+        </footer>
     </div>
-    <script src="quiz.js"></script>
+    <script src="./src/quiz.js"></script>
 </body>
 </html>
