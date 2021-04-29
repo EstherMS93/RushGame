@@ -39,7 +39,7 @@ let questions = [
     question: "What is a Tifosi?",
     choiceA: "The name of a circuit",
     choiceB: "A Ferrari supporter",
-    choiceC: "An incident causing direct disqualification",
+    choiceC: "A race accident",
     choiceD: "A type of tyre",
     correct: "B",
     image: "img/baku.png",
