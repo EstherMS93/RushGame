@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
     <title>Formula Rush</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-    <video src="img/car-background.mp4" type="video/mov" autoplay loop playsinline muted></video>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <video
+      src="img/car-background.mp4"
+      type="video/mov"
+      autoplay
+      loop
+      playsinline
+      muted
+    ></video>
     <header>
-        <nav id="nav-bar">
-            <img src="img/logo_formula1_nuevo.jpg" alt="logo-f1" id="logo">
-            <a href="index.html" id="reload"> <i class="fas fa-angle-double-left"></i> Return to paddock</a>
-        </nav>
+      <nav id="nav-bar">
+        <img src="img/logo_formula1_nuevo.jpg" alt="logo-f1" id="logo" />
+        <a href="index.html" id="reload">
+          <i class="fas fa-angle-double-left"></i> Return to paddock</a
+        >
+      </nav>
     </header>
     <div id="container">
-        <h1 id="title"><i class="fas fa-flag-checkered"></i> <span>RUSH!</span> <i class="fas fa-flag-checkered"></i> </h1>
-        <div id="start">
-            <p>Ready? Set? Go!</p>
+      <h1 id="title">
+        <i class="fas fa-flag-checkered"></i> <span>RUSH!</span>
+        <i class="fas fa-flag-checkered"></i>
+      </h1>
+      <div id="start">
+        <p>Ready? Set? Go!</p>
+      </div>
+      <div id="quiz" style="display: none">
+        <div id="question"></div>
+        <div id="circuit"></div>
+        <div id="choices">
+          <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+          <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+          <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+          <div class="choice" id="D" onclick="checkAnswer('D')"></div>
         </div>
-        <div id="quiz" style="display: none">
-            <div id="question"></div>
-            <div id="circuit"></div>
-            <div id="choices">
-                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
-            </div>
-            <div id="timer">
-                <div id="counter"></div>
-                <div id="timedisplay"></div>
-                <div id="chrono"></div>
-            </div>
-            <div id="progress"></div>
-            <audio class="sound" id="audiotag1" src="audio/mixkit-car-engine-start-1566.wav" preload="auto"></audio>
-            <audio class="sound" id="audiotag2" src="audio/mixkit-small-car-horn-717.wav" preload="auto"></audio>
+        <div id="timer">
+          <div id="counter"></div>
+          <div id="timedisplay"></div>
+          <div id="chrono"></div>
         </div>
-        <div id="scoreContainer" style="display: none">
-            <img src="img/schumi.gif" alt="Michael Schumacher" id="schumi">
-        </div>
+        <div id="progress"></div>
+        <audio
+          class="sound"
+          id="audiotag1"
+          src="audio/mixkit-car-engine-start-1566.wav"
+          preload="auto"
+        ></audio>
+        <audio
+          class="sound"
+          id="audiotag2"
+          src="audio/mixkit-small-car-horn-717.wav"
+          preload="auto"
+        ></audio>
+      </div>
+      <div id="scoreContainer" style="display: none">
+        <img src="img/schumi.gif" alt="Michael Schumacher" id="schumi" />
+      </div>
     </div>
     <footer id="footer">
-        <p>
-            2021 Esther Martinez Saiz for Ironhack Paris <i class="fas fa-copyright"></i>
-        </p>
+      <p>
+        2021 Esther Martinez Saiz for Ironhack Paris
+        <i class="fas fa-copyright"></i>
+      </p>
     </footer>
     <script src="./src/quiz.js"></script>
-</body>
+  </body>
 </html>
