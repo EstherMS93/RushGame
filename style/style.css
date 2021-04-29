@@ -4,6 +4,11 @@ body{
     font-family: Play;
     background-color: black;
 }
+@media only screen and (max-width: 1026px) {
+    * {
+        font-size: smaller;
+    }
+}
 video {
     object-fit: cover;
     width: 100vw;
@@ -25,18 +30,18 @@ video {
     opacity: 0.8;
 }
 #logo {
-    height: 100px;
-    width: 130px;
+    height: 4em;
+    width: 5em;
 }
 #reload {
     text-decoration: none;
     background-color: ghostwhite;
     color: darkred;
-    font-weight: 800;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 #container{
-    margin : 15% auto;
+    margin : 10% auto;
     background-color: white;
     height: 30rem;
     width : 70rem;
@@ -45,13 +50,35 @@ video {
     opacity: 0.9;
     position: relative;
 }
+@media only screen and (max-width: 1026px) {
+    #container {
+        width: 100vw;
+        height: 70vh;
+        margin-top: 20%;
+        margin-left: auto;
+    }
+}
 #title {
     text-align: center;
     font-size: 5rem;
     padding-top: 5%;
 }
+.fa-flag-checkered{
+    animation: ease;
+    -webkit-animation: rotation 3s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(360deg);
+		}
+}
 #title span{
-    background: -webkit-linear-gradient(rgb(141, 135, 135), darkred);
+    background: -webkit-linear-gradient(rgb(241, 192, 192), darkred);
+    background-clip: unset;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -59,13 +86,13 @@ video {
     font-size: 1.5em;
     font-weight: bolder;
     word-break: break-all;
-    width:80%;
+    width:60%;
     height:25%;
     border : 2px solid black;
     text-align: center;
     cursor: pointer;
     position: absolute;
-    left:10%;
+    left:20%;
     top:50%;
     color : black;
 }
@@ -80,15 +107,25 @@ video {
 }
 
 #question{
-    width:500px;
-    height : 125px;
+    width: 50%;
+    height : 15%;
     position: absolute;
     right:0;
     top:0;
 }
+@media only screen and (max-width: 1026px) {
+    #question, #choices {
+    width: 90vw;
+    }
+}
+@media only screen and (max-width: 1026px) {
+    #choices {
+    width: 90vw;
+    }
+}
 #question p{
-    margin : 0;
-    padding : 15px;
+    margin-top : 3%;
+    padding : 5%, 0;
     font-size: 1.25em;
 }
 #circuit{
@@ -103,8 +140,13 @@ video {
     height : 12em;
     border-top-left-radius: 5px;
 }
+@media only screen and (max-width: 1026px) {
+    #circuit {
+        display: none;
+    }
+}
 #choices{
-    width : 480px;
+    width : 50%;
     position: absolute;
     right : 0;
     top : 125px;
@@ -121,7 +163,7 @@ video {
     margin-bottom: 5%;
 }
 .choice:hover{
-    border : 2px solid grey;
+    border : 2px groove rgb(184, 160, 160);
     font-weight: bold;
     background-color: rgba(212,175,55, 0.5);
 }
@@ -177,6 +219,12 @@ video {
     position: relative;
     display: none;
 }
+@media only screen and (max-width: 1026px) {
+    #scoreContainer {
+        width: 100vw;
+        height: 70vh;
+    }
+}
 
 #scoreContainer p{
     position: absolute;
@@ -190,9 +238,25 @@ video {
     color: cornsilk;
     text-align: center;
 }
+
 #schumi {
     text-align: center;
     border-radius: 5%;
     margin-top: 10%;
     margin-left: 40%;
+}
+#footer {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(3, 5, 109, 0.7);
+    padding: 0.25%;
+    bottom: 0%;
+    left: 0%;
+}
+
+#footer p {
+    margin-left: 10%;
+    color: cornsilk;
+    font-weight: bold;
+    font-size: 1rem;
 }
